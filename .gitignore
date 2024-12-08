@@ -11,7 +11,7 @@ besu/contracts/node_modules
 
 besu/contracts/build/contracts
 
-
+api/.env
 
 .DS_Store
 tmp
