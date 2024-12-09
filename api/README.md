@@ -1,7 +1,7 @@
 
 # GOLEDGER CHALLENGE REST API
 
-Este projeto é uma API escrita em Go que interage com um **smart contract** onde foi feito o deploy previamente na **blockchain Besu**. A API permite interagir com o **smart contract**, armazenar o valor do contrato em um banco de dados SQL e fornecer endpoints para recuperar, definir e sincronizar valores entre a blockchain e o banco de dados.
+Este projeto consiste em uma API escrita em Go que interage com um **smart contract** previamente "deployado" na **blockchain Besu**. A API permite interagir com o **smart contract**, armazenar o valor do contrato em um banco de dados SQL e fornecer endpoints para recuperar, definir e sincronizar valores entre a blockchain e o banco de dados.
 
 ## Database
 A aplicação usa um banco de dados **PostgreSQL** para armazenar o valor da variável do smart contract. O schema do banco de dados inclui uma tabela para armazenar os valores do contrato.
@@ -9,7 +9,7 @@ A aplicação usa um banco de dados **PostgreSQL** para armazenar o valor da var
 ## Endpoints
 
 ### 1. `POST /simple-storage/set/value`
-**Description:**  
+**Descrição:**  
 Define um novo valor para a variável do **smart contract**. Esse valor é enviado para o **smart contract**,
 
 **Request Body:**
@@ -91,10 +91,12 @@ Compara o valor armazenado no banco de dados com o valor atual da variável do *
 ## Instruções
 
 ### 1. Clone o repositório
+```
+git clone https://github.com/JoaoVFerreira/goledger-challenge-besu.git
+```
 
-
-### 2. Cria o arquivo `.env` na raiz do projeto
-No projeto existe um `.env.example` com algumas sugestões
+### 2. Crie o arquivo `.env` na raiz do projeto
+Use o arquivo `.env.example` como base, que contém algumas sugestões:
 
 ```
 CONTRACT_ADDRESS=your_contract_address
@@ -117,10 +119,10 @@ go run ./cmd/main.go
 A aplicação vai estar disponivel em `http://localhost:8080`.
 
 ## Tecnologias
-- **Go**
+- **Go**: Linguagem de programação.
 - **PostgreSQL**: Banco de dados SQL.
-- **Gin**: framework REST API.
-- **Blockchain**
+- **Gin**: Framework para construção de APIs REST.
+- **Blockchain**: Integração com a blockchain Besu.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
